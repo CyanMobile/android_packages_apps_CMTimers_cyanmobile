@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="horizontal" 
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content" 
+	android:gravity="center_horizontal">
+	<TextView 
+		android:id="@+id/displayMinutes" 
+		android:textSize="12pt"
+		android:text="@string/minutess" 
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content" />
+	<TextView
+		android:text="@string/minutesparator"
+		android:textSize="12pt"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content" />
+	<TextView 
+		android:id="@+id/displaySeconds" 
+		android:textSize="12pt"
+		android:text="@string/secondss" 
+		android:layout_marginLeft="@null"
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content" />
+</LinearLayout>

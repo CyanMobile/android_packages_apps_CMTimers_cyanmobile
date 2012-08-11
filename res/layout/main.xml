@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+<LinearLayout 
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:colorBackground="#000000">
+	
+	
+	<LinearLayout android:orientation="horizontal"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center_horizontal"
+		android:paddingTop="15dip">
+		<ImageButton 
+			android:id="@+id/add_hours" 
+			android:src="@drawable/up"
+			android:paddingRight="45dip" 
+			android:background="@null" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"/>
+		<ImageButton 
+			android:id="@+id/add_minutes" 
+			android:src="@drawable/up"
+			android:paddingRight="45dip" 
+			android:background="@null" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"/>
+		<ImageButton android:id="@+id/add_seconds" android:src="@drawable/up"
+			android:padding="3dip" android:background="@null"
+			android:layout_marginLeft="@null"
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" />
+	</LinearLayout>
+	<LinearLayout android:orientation="horizontal"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center_horizontal">
+		<TextView android:id="@+id/displayHours"
+			android:textSize="34pt" 
+			android:textColor="#fff" android:text="@string/hours" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"/>
+		<TextView 
+		    android:id="@+id/hour_separator"
+			android:textSize="34pt" 
+			android:textColor="#fff" android:text="@string/hoursparator" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"/>
+		<TextView android:id="@+id/displayMinutes"
+			android:textSize="34pt" 
+			android:textColor="#fff" android:text="@string/minutess" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"/>
+		<TextView 
+			android:textSize="34pt" 
+			android:textColor="#fff" android:text="@string/minutesparator" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"/>
+		<TextView android:id="@+id/displaySeconds" 
+			android:textSize="34pt" 
+			android:textColor="#fff" android:text="@string/secondss"
+			android:layout_marginLeft="@null" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"/>
+	</LinearLayout>
+	<LinearLayout android:orientation="horizontal"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center_horizontal">
+		<ImageButton android:id="@+id/subtract_hours"
+			android:layout_span="1" 
+			android:src="@drawable/down" 
+			android:paddingRight="45dip" 
+			android:background="@null"
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" />
+		<ImageButton android:id="@+id/subtract_minutes"
+			android:layout_span="1" 
+			android:src="@drawable/down" 
+			android:paddingRight="45dip" 
+			android:background="@null"
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" />
+		<ImageButton android:id="@+id/subtract_seconds"
+			android:src="@drawable/down" android:padding="3dip"
+			android:background="@null" 
+			android:layout_marginLeft="@null" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"/>
+	</LinearLayout>
+	<LinearLayout android:orientation="vertical"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:paddingTop="30dip">
+		<Button android:id="@+id/start_button" 
+			android:layout_weight="2"
+			android:text="@string/start" 
+			android:minEms="20" 
+			android:textSize="48sp"
+			android:layout_height="wrap_content" 
+			android:layout_width="wrap_content"/>
+
+		<TextView android:layout_height="3sp" 
+			android:layout_width="wrap_content" 
+			/>
+
+		<Button android:id="@+id/reset_button" android:layout_weight="2"
+			android:text="@string/reset" android:textSize="48sp" android:layout_height="wrap_content"
+			android:minEms="20" android:colorBackground="#00ffff" 
+			android:layout_width="wrap_content"/>
+	</LinearLayout>
+		
+</LinearLayout>
+</ScrollView>

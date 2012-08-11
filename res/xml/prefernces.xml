@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<PreferenceCategory android:title="Shake Settings">
+		<CheckBoxPreference android:key="Shake_to_reset"
+			android:title="Shake to reset" android:defaultValue="true"/>
+                <CheckBoxPreference android:title="Show hour column" 
+                        android:key="show_hour_column_preference" android:defaultValue="true"></CheckBoxPreference>
+	</PreferenceCategory>
+
+
+</PreferenceScreen>
+
