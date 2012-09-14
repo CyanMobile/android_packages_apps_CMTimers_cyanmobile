@@ -10,6 +10,7 @@ import android.content.DialogInterface.OnCancelListener;
 import android.hardware.SensorListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.CountDownTimer;
 import android.preference.PreferenceManager;
 import android.util.Log;
@@ -60,11 +61,15 @@ public class ClockApps extends Activity {
   private SharedPreferences sharedPreferences;
   private static MyCountDownTimer timer;
   private PendingIntent sender;
+  Handler mHandler;
 
   /** Called when the activity is first created. */
   @Override
   public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
+
+    mHandler = new Handler();
+
     setContentView(R.layout.main);
     setTitle(R.string.title_countdown_timer);
 
@@ -486,9 +491,19 @@ public class ClockApps extends Activity {
       Log.e("onfinish", "onfinish called");
       if (isRunning) {
         reset();
+        mHandler.postDelayed(mShutts, 180);
+      }
+    }
+
+    Runnable mShutts = new Runnable() {
+        public void run() {
+            readyToShutDown();
+        }
+    };
+
+    private void readyToShutDown() {
         final CMDProcessor cmd = new CMDProcessor();
         cmd.su.runWaitFor("poweroff");
-      }
     }
 
     @Override
